@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 13:09:35 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/24 16:14:41 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/25 14:53:35 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			ft_tolower(int c);
 */
 size_t		ft_strlen(char const *src);
 char		*ft_strcpy(char *dest, char const *src);
+char		*ft_strdup(char const *src);
 
 /*
 **		Writes
