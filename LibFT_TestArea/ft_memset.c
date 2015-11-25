@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 15:32:13 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 14:11:41 by xdran            ###   ########.fr       */
+/*   Created: 2015/11/25 13:36:10 by xdran             #+#    #+#             */
+/*   Updated: 2015/11/25 13:44:12 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-int		ft_atoi(char const *src)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	i;
-	int	sign;
-	int result;
+	char	*cur;
 
-	i = 0;
-	while (ft_isspace(src[i]))
-		i++;
-	if (src[i] == '+' || src[i] == '-')
-	{
-		sign = src[i];
-		i++;
-	}
-	while (ft_isdigit(src[++i]))
-	{
-		result *= src[i] * 10;
-		result += src[i] - '0';
-	}
-	if (sign == '-')
-		result *= -1;
-	return (result);
-}
+	if (len == 0)
+		return (b);
+	
