@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:22:10 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 14:46:49 by xdran            ###   ########.fr       */
+/*   Created: 2015/11/25 14:37:42 by xdran             #+#    #+#             */
+/*   Updated: 2015/11/25 14:46:05 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char const *src)
-{
-	unsigned int	i;
+#include <stdlib.h>
+#include "libft.h"
 
-	i = 0;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+char	*ft_strdup(char const *src)
+{
+	char	*dup;
+
+	dup = (char *)malloc(sizeof(*dup) * (ft_strlen(src) + 1));
+	if (!dup)
+		return (NULL);
+	return (ft_strcpy(dup, src));
 }
