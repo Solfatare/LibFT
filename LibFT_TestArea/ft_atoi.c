@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:32:13 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 15:50:44 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/25 17:02:33 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_atoi(char const *src)
 		sign = src[i];
 		i++;
 	}
-	while (ft_isdigit(src[++i]))
+	while (ft_isdigit(src[i++]))
 	{
 		result *= src[i] * 10;
 		result += src[i] - '0';

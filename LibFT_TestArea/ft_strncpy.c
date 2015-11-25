@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 14:58:08 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 15:48:57 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/25 17:05:26 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strncpy(char *dest, char const *src, size_t n)
 	unsigned	i;
 
 	i = 0;
-	while (src[++i] && i <= n)
+	while (src[i++] && i < n)
 		dest[i] = src[i];
-	while (++i <= n)
+	while (i++ < n)
 		dest[i] = '\0';
 	return (dest);
 }
