@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:32:13 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 14:11:41 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/25 15:50:44 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int		ft_atoi(char const *src)
 	int result;
 
 	i = 0;
+	result = 0;
 	while (ft_isspace(src[i]))
 		i++;
 	if (src[i] == '+' || src[i] == '-')
