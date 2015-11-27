@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:22:10 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/27 13:58:43 by xdran            ###   ########.fr       */
+/*   Created: 2015/11/27 14:17:07 by xdran             #+#    #+#             */
+/*   Updated: 2015/11/27 14:26:04 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char const *src)
-{
-	unsigned int	i;
+#include <string.h>
 
-	i = 0;
-	while (src[i++])
-		dest[i] = src[i];
-	dest[i] = '\0';
+void	*ft_memcpy(void *dest, void const *src, size_t len)
+{
+	char	*c_dest;
+	char	*c_src;
+
+	if (len == 0 || dest == src)
+		return (dest);
+	c_dest = (char *)dest;
+	c_src = (char *)src;
+	while (len--)
+		*c_dest++ = *c_src++;
 	return (dest);
 }

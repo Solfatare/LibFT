@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:13:04 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 17:03:22 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/24 16:07:14 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t		ft_strlen(char const *src)
 	if (!src)
 		return (0);
 	i = 0;
-	while (src[i])
+	while (str[i])
 		i++;
 	return (i);
 }

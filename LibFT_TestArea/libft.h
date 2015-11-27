@@ -6,7 +6,7 @@
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 13:09:35 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/25 15:11:36 by xdran            ###   ########.fr       */
+/*   Updated: 2015/11/27 15:52:25 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,17 @@
 # include <string.h>
 
 /*
-**		Char Tests
+**		Memories
+*/
+void		*ft_memset(void *b, int c, size_t len);
+void		ft_bzero(void *b, size_t len);
+void		*ft_memcpy(void *dest, void const *src, size_t len);
+void		*ft_memccpy(void *dest, void const *src, int c, size_t len);
+void		*ft_memchr(void const *b, int c, size_t len);
+void		*ft_memcmp(void const *b1, void const *b2, size_t len);
+void		*ft_memmove(void *dest, void const *src, size_t len);
+/*
+**		Char Checks
 */
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -50,7 +60,7 @@ void		ft_putendl_fd(char const *src, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
 /*
-**		Numbers
+**		Converts
 */
 int			ft_atoi(char const *src);
 

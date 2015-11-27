@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xdran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:22:10 by xdran             #+#    #+#             */
-/*   Updated: 2015/11/27 13:58:43 by xdran            ###   ########.fr       */
+/*   Created: 2015/11/27 14:07:25 by xdran             #+#    #+#             */
+/*   Updated: 2015/11/27 14:13:05 by xdran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char const *src)
-{
-	unsigned int	i;
+#include "libft.h"
 
-	i = 0;
-	while (src[i++])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+void	ft_bzero(void *b, size_t len)
+{
+	ft_memset(b, 0, len);
 }
